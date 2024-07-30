@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel='shortcut icon' type='image/x-icon' href='favicon.ico'>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pac-Man Game</title>
+  <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+  <img src="./Images/Pac-Man-0.webp"  class="limg" >
+  <div id="game-container"></div>
+  <audio id="score_sound" src="./sound/Chomp.mp3"></audio>
+  <div id="score">
+    Score: <span id="score-display">0</span>
+  </div>
+  <div id="game-over-screen">
+    <img src="./Images/OIG1.jpg" class="game-over-img">
+    <h1>Game Over</h1>
+    <p>Sorry, you've lost the game.</p>
+    <button id="play-again-button">Play Again</button>
+  </div>
+
+  <div id="game-win">
+    <img src="./Images/OIG2.jpg"  class="small-img" >
+    <h1>Game Win</h1>
+    <p>You are a monster, you are the strongest, fuck everyone!</p>
+    <button id="play-win-but">Play Again</button>
+  </div>
+
+  <script src="index.js"></script>
+  <div id="souls-display">Soul: 3</div>
+</body>
+</html>

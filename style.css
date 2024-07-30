@@ -1,0 +1,211 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  
+  #game-container {
+    position: relative;
+    width: 588px; /* Adjust according to your game map size */
+    height: 588px; /* Adjust according to your game map size */
+    background-color: #000;
+  }
+  
+  .cell {
+    position: absolute;
+    width: 21px;
+    height: 21px;
+    background-color: #000;
+    border: 1px solid #333;
+  }
+  
+  
+  .wall {
+    background-color: #00f; /* Blue for walls */
+    width: 20px;
+  }
+  
+  .path {
+    background-color: #000; /* Black for paths */
+  }
+  
+  .pill-on-path, .pill-on-intersection {
+    background-color: #fff; /* White for pills */
+    border-radius: 50%; /* Make it a perfect circle */
+    height: 10px; /* Adjust size of circle */
+    width: 10px; /* Adjust size of circle */
+    position: absolute;
+    transform: translate(50%, 50%); /* Center the circle dot */
+  }
+  
+  
+  .intersection {
+    background-color: rgb(213, 252, 163); /* White for pills */
+    border-radius: 50%; /* Make it a perfect circle */
+    height: 14px; /* Adjust size of circle */
+    width: 14px; /* Adjust size of circle */
+    position: absolute;
+    /* transform: translate(50%, 50%);  */
+  }
+  
+  .pill-on-intersection {
+    background-color: #fff; /* White for pills on intersections */
+  }
+  
+  .tunnel {
+    background-color: #000; /* Black for tunnels */
+  }
+  
+  .pacman {
+    width: 15px; /* Adjust size as needed */
+    height: 15px; /* Adjust size as needed */
+    background-image: url('./Images/1569866602be61a8ed35d8fc8d0fb166_w200.gif'); /* Replace 'pacman.png' with your image file path */
+    background-size: cover; /* Ensures the image covers the entire element */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    border-radius: 50%; /* Makes the element circular */
+}
+  #score {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 24px;
+    margin-bottom: auto;
+  }
+  
+  #score-display {
+    font-weight: bold;
+    color: yellow; /* Yellow color for score display */
+  }
+  #souls-display {
+    text-align: center;
+    font-size: 24px;
+    margin-top: 20px;
+    margin-bottom: auto;
+    margin-left: 20px;
+  }
+  .ghost {
+    background-color: red;
+    border-radius: 50%;
+  }
+  .ghost {
+    width: 15px; /* Adjust size as needed */
+    height: 15px; /* Adjust size as needed */
+    background-image: url('./Images/acqbGGGcM.gif'); /* Replace 'pacman.png' with your image file path */
+    background-size: cover; /* Ensures the image covers the entire element */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    border-radius: 50%; /* Makes the element circular */
+}
+#game-over-screen {
+  display: none; /* Initially hidden */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent dark overlay */
+  color: white;
+  text-align: center;
+  padding: 50px;
+  box-sizing: border-box;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: 'Arial', sans-serif;
+}
+
+#game-over-screen h1 {
+  font-size: 4em;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Text shadow for better readability */
+}
+
+#game-over-screen p {
+  font-size: 1.5em;
+  margin-bottom: 30px;
+}
+
+#game-over-screen button {
+  font-size: 1.8em;
+  padding: 15px 30px;
+  background-color: #4CAF50; /* Green */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#game-over-screen button:hover {
+  background-color: #45a049; /* Darker green on hover */
+}
+
+#game-win {
+  display: none; /* Initially hidden */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent dark overlay */
+  color: white;
+  text-align: center;
+  padding: 50px;
+  box-sizing: border-box;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: 'Arial', sans-serif;
+}
+img {
+  width: 500px;
+  height: 500px;
+  margin-bottom: auto;
+  border-radius: 3%;
+}
+.limg {
+  width: 140px;
+  height: 140px;
+  margin-bottom: auto;
+}
+.game-over-img {
+  width: 500px;
+  height: 500px;
+  margin-bottom: auto;
+  border-radius: 3%;
+  
+}
+
+#game-win h1 {
+  font-size: 4em;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);/* Text shadow for better readability */
+}
+
+#game-win p {
+  font-size: 1.5em;
+  margin-bottom: 30px;
+}
+
+#game-win button {
+  font-size: 1.8em;
+  padding: 15px 30px;
+  background-color: #4CAF50; /* Green */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#game-win button:hover {
+  background-color: #45a049;/* Darker green on hover */
+}
+
